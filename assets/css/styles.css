@@ -1,0 +1,326 @@
+:root {
+    font-family: 'Inter', sans-serif !important;
+    font-family: 'Roboto', sans-serif !important;
+    font-family: 'Yantramanav', sans-serif !important;
+    font-size: 15px;
+    font-weight: bold;
+    --gradiant_orange: #F28020;
+    --gradiant_maroon: #B12C31;
+    --orange: #F18A2D;
+    --white: #ffffff;
+    --black: #000000;
+}
+
+body,
+html,
+* {
+    outline: none !important;
+}
+
+header {
+    height: 80px;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 40%);
+    position: relative;
+}
+
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    background: transparent linear-gradient(90deg, #F28020 0%, #B12C31 100%) 0% 0% no-repeat padding-box;
+    height: calc(100vh - 80px);
+    display: flex;
+    align-items: center;
+}
+
+form {
+    max-width: 430px;
+    margin-left: auto;
+}
+
+.form-group.form-icici-img.from-icici-select:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 0 5px;
+    border-color: var(--white) transparent transparent transparent;
+    line-height: 0px;
+    _border-color: var(--white) #000000 #000000 #000000;
+    _filter: progid:DXImageTransform.Microsoft.Chroma(color='#000000');
+    position: absolute;
+    right: 20px;
+}
+
+.form-group.form-icici-img.from-icici-select {
+    position: relative;
+}
+
+.form-group.form-icici-img.from-icici-select select {
+    appearance: none;
+}
+
+.form-checkbox-wrapper {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.form-icici-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 4px;
+}
+
+.form-checkbox-wrapper>div {
+    flex: 1 0 50%;
+    margin-bottom: 10px;
+}
+
+.form-icici input {
+    display: none;
+}
+
+.form-icici label:before {
+    content: "";
+    height: 28px;
+    width: 28px;
+    min-width: 28px;
+    /* position: absolute; */
+    border: 2px solid var(--orange);
+    border-radius: 2px;
+    display: block;
+    margin-right: 10px;
+    /* top: -3px;
+    left: 0; */
+}
+
+.form-icici-input:checked+label:before {
+    background: var(--white);
+    border-color: var(--white);
+}
+
+.form-icici-input:checked+label:after {
+    content: "";
+    height: 20px;
+    width: 8px;
+    border: 2px solid var(--orange);
+    position: absolute;
+    border-top: 0;
+    border-left: 0;
+    transform: rotate(35deg);
+    top: 2px;
+    left: 9px;
+}
+
+
+label.form-icici-label {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    color: var(--white);
+    font-weight: bold;
+    position: relative;
+    /* padding-left: 40px; */
+}
+
+.form-group>input,
+.form-group>select {
+    width: 100%;
+    height: 40px;
+    border: 1px solid var(--orange);
+    background: transparent !important;
+    color: var(--white) !important;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 0px 20px 0px 0px;
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 40px;
+}
+
+.form-group input::placeholder {
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.form-group>select option {
+    color: var(--black) !important;
+}
+
+.btn-icici {
+    background-color: var(--orange);
+    color: var(--white);
+    border-color: var(--orange);
+    font-size: 22px;
+    box-shadow: 0px 4px 0 0 var(--white);
+    font-weight: bold;
+    letter-spacing: 0.44px;
+    width: 157px;
+    padding: 0;
+    line-height: 32px;
+    height: 32px;
+    background: var(--orange) 0% 0% no-repeat padding-box;
+    border-radius: 12px;
+}
+
+img.main-bg {
+    position: absolute;
+    height: calc(100vh - 80px);
+    bottom: 0;
+    top: 80px;
+    max-width: 60%;
+    object-fit: cover;
+    object-position: 80%;
+}
+
+form#icici-form h3 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+form#icici-form h3:before,
+form#icici-form h3:after {
+    content: "";
+    height: 10px;
+    width: 10px;
+    border-radius: 100px;
+    background: white;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 10px;
+    margin-top: -4px;
+}
+
+form#icici-form h3:after {
+    margin-right: 0;
+    margin-left: 10px;
+}
+
+.form-check-label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 25px;
+    margin-top: 18px;
+}
+
+footer {
+    width: 55vw;
+    opacity: 0.8;
+    backdrop-filter: blur(50px);
+    background: transparent linear-gradient(90deg, #F28020 0%, rgb(177 44 49 / 0.10) 100%) 0% 0% no-repeat padding-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    color: white;
+    text-shadow: 0 0 0 #fff;
+}
+
+footer p:last-child {
+    margin: 0;
+}
+
+/** || Responsive **/
+
+@media screen and (max-width: 1430px) {
+    img.main-bg {
+        object-position: 100%;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    img.main-bg {
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+
+    header {
+        height: unset;
+        padding: 10px 0;
+    }
+
+    .header-common {
+        flex: 1;
+        padding: 10px
+    }
+    
+    .header-common img {
+        max-width: 100%;
+    }
+    
+    .header-common.header-left {
+        border-right: 1px solid orange;
+    }
+
+    .header-common.header-right {
+        text-align: right;
+    }
+
+    .form-checkbox-wrapper {
+        flex-flow: column nowrap;
+    }
+
+    img.main-bg {
+        display: none;
+    }
+
+    form {
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+
+    main {
+        height: unset;
+        padding: 30px 0;
+        /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f28020+0,b12c31+100 */
+        background: #f28020;
+        /* Old browsers */
+        background: -moz-linear-gradient(top, #f28020 0%, #b12c31 100%);
+        /* FF3.6-15 */
+        background: -webkit-linear-gradient(top, #f28020 0%, #b12c31 100%);
+        /* Chrome10-25,Safari5.1-6 */
+        background: linear-gradient(to bottom, #f28020 0%, #b12c31 100%);
+        /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f28020', endColorstr='#b12c31', GradientType=0);
+        /* IE6-9 */
+    }
+
+    footer {
+        background: #b12c31;
+        opacity: 1;
+        position: relative;
+        width: 100%;
+        padding: 30px;
+        padding-top: 10px;
+    }
+
+    footer p {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+
+    form#icici-form img.main-bg-mobile {
+        max-width: 200px;
+        display: block !important;
+        margin: 0 auto;
+    }
+
+    .btn-icici {
+        width: 100%;
+    }
+
+}
