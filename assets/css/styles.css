@@ -77,6 +77,7 @@ form {
     align-items: center;
     justify-content: center;
     margin-bottom: 4px;
+    position: relative;
 }
 
 .form-checkbox-wrapper>div {
@@ -86,6 +87,23 @@ form {
 
 .form-icici input {
     display: none;
+}
+
+.form-icici-img label.error {
+    position: absolute;
+    color: #652e2e;
+    background: var(--orange);
+    right: 0;
+    margin: 0;
+    height: 100%;
+    border-radius: 0px 20px 0px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    white-space: pre-wrap;
+    font-size: 12px;
+    width: 31%;
 }
 
 .form-icici label:before {
@@ -157,9 +175,9 @@ label.form-icici-label {
 }
 
 .btn-icici {
-    background-color: var(--orange);
+    background-color: var(--orange) !important;
     color: var(--white);
-    border-color: var(--orange);
+    border-color: var(--orange) !important;
     font-size: 22px;
     box-shadow: 0px 4px 0 0 var(--white);
     font-weight: bold;
@@ -170,6 +188,15 @@ label.form-icici-label {
     height: 32px;
     background: var(--orange) 0% 0% no-repeat padding-box;
     border-radius: 12px;
+}
+
+.btn-icici:hover,
+.btn-icici:focus {
+    box-shadow: 0px 3px 0 0 var(--white);
+}
+
+.btn-icici:active {
+    box-shadow: 0px 0px 0 0 var(--white);
 }
 
 img.main-bg {
@@ -226,10 +253,30 @@ footer {
     padding: 10px;
     color: white;
     text-shadow: 0 0 0 #fff;
+    line-height: 13px;
+    font-size: 12px;
+}
+
+footer p {
+    margin-bottom: .5rem;
 }
 
 footer p:last-child {
     margin: 0;
+}
+
+label.error.check-error {
+    position: absolute;
+    display: none;
+    top: 20px;
+    left: 0;
+    background: orange;
+    margin: 0;
+    padding: 0 10px;
+}
+
+.form-group {
+    position: relative;
 }
 
 /** || Responsive **/
@@ -257,11 +304,11 @@ footer p:last-child {
         flex: 1;
         padding: 10px
     }
-    
+
     .header-common img {
         max-width: 100%;
     }
-    
+
     .header-common.header-left {
         border-right: 1px solid orange;
     }
@@ -306,6 +353,7 @@ footer p:last-child {
         width: 100%;
         padding: 30px;
         padding-top: 10px;
+        margin-top: -10px;
     }
 
     footer p {

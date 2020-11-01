@@ -41,74 +41,86 @@
       <div class="row">
         <div class="col-12">
           <div class="form-wrapper">
-            <form id="icici-form" action="">
+            <form id="icici-form" autocomplete="off">
               <img src="./assets/images/bg_logo.png" alt="main bg" class="d-none main-bg-mobile">
-              <h3>REGISTER HERE</h3>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="text" class="form-control" placeholder="NAME*">
-              </div>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="email" class="form-control" placeholder="EMAIL ID*">
-              </div>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="tel" class="form-control" placeholder="CONTACT NUMBER">
-              </div>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="text" class="form-control" placeholder="COMPANY NAME*">
-              </div>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="text" class="form-control" placeholder="DEPARTMENT*">
-              </div>
-              <div class="form-group form-icici-img from-icici-select">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <select class="form-control">
-                  <option aria-selected="true" selected>DESIGNATION</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
-                </select>
-              </div>
-              <div class="form-group form-icici-img">
-                <img src="./assets/images/form-plus.svg" alt="plus sign">
-                <input type="text" class="form-control" placeholder="COUNTRY*">
-              </div>
-              <div class="form-group">
-                <h4 class="form-check-label">WHICH SESSION YOU WOULD LIKE TO ATTEND?</h4>
-                <div class="form-checkbox-wrapper d-flex">
-                  <div class="form-icici">
-                    <input class="form-icici-input" type="checkbox" id="sesson-check1" value="option1">
-                    <label class="form-icici-label" for="sesson-check1">All</label>
-                  </div>
-                  <div class="form-icici">
-                    <input class="form-icici-input" type="checkbox" id="sesson-check2" value="option2">
-                    <label class="form-icici-label" for="sesson-check2">Future of Banking with Brett King</label>
-                  </div>
-                  <div class="form-icici">
-                    <input class="form-icici-input" type="checkbox" id="sesson-check3" value="option2">
-                    <label class="form-icici-label" for="sesson-check3">Skilling for Future with Amitabh Singh</label>
-                  </div>
-                  <div class="form-icici">
-                    <input class="form-icici-input" type="checkbox" id="sesson-check4" value="option2">
-                    <label class="form-icici-label" for="sesson-check4">Libor Transition with Sravan Kumar</label>
-                  </div>
-                  <div class="form-icici">
-                    <input class="form-icici-input" type="checkbox" id="sesson-check5" value="option2">
-                    <label class="form-icici-label" for="sesson-check5">Business of banking for trade/payment and
-                      recovery collection</label>
+              <div id="form-fields">
+                <h3>REGISTER HERE</h3>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="text" class="form-control" name="name" placeholder="NAME*" required autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="email" class="form-control" name="email_id" placeholder="EMAIL ID*" required autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="tel" class="form-control" name="contact_number" placeholder="CONTACT NUMBER" autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="text" class="form-control" name="company" placeholder="COMPANY NAME*" required autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="text" class="form-control" name="department" placeholder="DEPARTMENT*" required autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img from-icici-select">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <select class="form-control" name="designation" id="u_designation" required>
+                    <option selected value="designation">DESIGNATION</option>
+                    <option>Managing Director</option>
+                    <option>CEO / CFO</option>
+                    <option>Board Member</option>
+                    <option>Head of Department</option>
+                    <option value="others">Others (Please specify in blank)</option>
+                  </select>
+                </div>
+                <div class="form-group form-icici-img" id="designation_other">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="text" class="form-control" placeholder="PLEASE SPECIFY*" name="designation_other" autocomplete="off">
+                </div>
+                <div class="form-group form-icici-img">
+                  <img src="./assets/images/form-plus.svg" alt="plus sign">
+                  <input type="text" class="form-control" placeholder="COUNTRY*" name="country" required autocomplete="off">
+                </div>
+                <div class="form-group">
+                  <h4 class="form-check-label">WHICH SESSION YOU WOULD LIKE TO ATTEND?</h4>
+                  <label class="error check-error"></label>
+                  <div class="form-checkbox-wrapper d-flex">
+                    <div class="form-icici">
+                      <input class="form-icici-input" name="session[]" type="checkbox" id="sesson-check1" value="all"
+                        checked="checked">
+                      <label class="form-icici-label" for="sesson-check1">All</label>
+                    </div>
+                    <div class="form-icici">
+                      <input class="form-icici-input" name="session[]" type="checkbox" id="sesson-check2"
+                        value="future_of_banking">
+                      <label class="form-icici-label" for="sesson-check2">Future of Banking with Brett King</label>
+                    </div>
+                    <div class="form-icici">
+                      <input class="form-icici-input" name="session[]" type="checkbox" id="sesson-check3"
+                        value="skilling_for_future">
+                      <label class="form-icici-label" for="sesson-check3">Skilling for Future with Amitabh Singh</label>
+                    </div>
+                    <div class="form-icici">
+                      <input class="form-icici-input" name="session[]" type="checkbox" id="sesson-check4"
+                        value="libor_transition">
+                      <label class="form-icici-label" for="sesson-check4">Libor Transition with Sravan Kumar</label>
+                    </div>
+                    <div class="form-icici">
+                      <input class="form-icici-input" name="session[]" type="checkbox" id="sesson-check5"
+                        value="business_of_banking">
+                      <label class="form-icici-label" for="sesson-check5">Business of banking for trade/payment and
+                        recovery collection</label>
+                    </div>
                   </div>
                 </div>
+                <button type="submit" name="form-registration" class="btn btn-primary btn-icici"
+                  id="form-reg-button">SUBMIT</button>
               </div>
-              <button type="submit" class="btn btn-primary btn-icici">SUBMIT</button>
             </form>
           </div>
-
         </div>
       </div>
     </div>
@@ -136,9 +148,13 @@
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
     crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-    crossorigin="anonymous"></script>
+    crossorigin="anonymous"></script> -->
+  <script src="./assets/js/jquery.validate.min.js"></script>
+  <script src="./assets/js/additional-methods.min.js"></script>
+  <script type="text/javascript" src="./assets/js/action.js"></script>
+  </script>
 </body>
 
 </html>
