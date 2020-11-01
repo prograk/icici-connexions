@@ -177,7 +177,7 @@ img.main-bg {
     height: calc(100vh - 80px);
     bottom: 0;
     top: 80px;
-    max-width: 60%;
+    max-width: 55%;
     object-fit: cover;
     object-position: 80%;
 }
