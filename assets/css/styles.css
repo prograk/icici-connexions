@@ -43,6 +43,10 @@ form {
     margin-left: auto;
 }
 
+.form-group.form-icici-img {
+    white-space: nowrap;
+}
+
 .form-group.form-icici-img.from-icici-select:before {
     content: "";
     width: 0;
